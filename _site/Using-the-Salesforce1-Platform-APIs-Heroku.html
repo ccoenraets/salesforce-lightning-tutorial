@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Salesforce Lightning Tutorial</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-721308-2', 'ccoenraets.github.io');
+      ga('send', 'pageview');
+    </script>
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Salesforce Lightning Tutorial</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a
+                        href="https://github.com/ccoenraets/salesforce-developer-workshop"><img
+                        src="images/icon-github.png" style="border: none;margin: -4px 0;height: 28px;width: 28px;"/>
+                    GitHub
+                    Project</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+
+
+<div class="container">
+
+<div class="row">
+
+    <div class="col-xs-12 col-sm-8">
+        <h1>Module 10&#58; Deploying an App on Heroku and Using the Salesforce REST APIs</h1>
+        <!--<hr/>-->
+        <p>In this module, you deploy and configure a Node.js application on Heroku: The application uses OAuth to authenticate with Salesforce, and the REST APIs to access Salesforce data.</p>
+
+<p><img src="images/api.jpg" alt=""></p>
+
+<h2>Step 1: Create a Connected App</h2>
+
+<ol>
+<li><p>In Setup, click <strong>Build</strong> &gt; <strong>Create</strong> &gt; <strong>Apps</strong></p></li>
+<li><p>In the <strong>Connected Apps</strong> section, click <strong>New</strong>, and define the Connected App as follows:</p>
+
+<ul>
+<li>Connected App Name: <strong>MyConference</strong></li>
+<li>API Name: <strong>MyConference</strong></li>
+<li>Contact Email: <strong>enter your email address</strong></li>
+<li>Enabled OAuth Settings: <strong>Checked</strong></li>
+<li>Callback URL: <strong>http://localhost:3000/oauthcallback.html</strong> (You&#39;ll change this later)</li>
+<li>Selected OAuth Scopes: <strong>Full Access (full)</strong></li>
+</ul>
+
+<p><img src="images/connected-app.jpg" alt=""></p></li>
+<li><p>Click <strong>Save</strong> and <strong>Continue</strong>.</p></li>
+</ol>
+
+<h2>Step 2: Create a Heroku Account</h2>
+
+<p>If you don&#39;t already have a Heroku account, follow the steps belowto create a free account:</p>
+
+<ol>
+<li><p>Open a browser and access the following URL: <a href="https://signup.heroku.com">https://signup.heroku.com</a></p></li>
+<li><p>Fill in the signup form and click <strong>Create Free Account</strong> button.</p></li>
+<li><p>Check your email. You will receive an activation email for your free account.</p></li>
+<li><p>Click the link in the activation email. Enter your new password information, and click <strong>Set password and log in</strong>.</p></li>
+</ol>
+
+<h2>Step 3: Familiarize Yourself with the Application</h2>
+
+<ol>
+<li><p>Access <a href="https://github.com/ccoenraets/salesforce-conference-demo">https://github.com/ccoenraets/salesforce-conference-demo</a></p></li>
+<li><p>Click the <strong>client</strong> link and then the <strong>index.html</strong> link to examine the code in <strong>client/index.html</strong>:</p>
+
+<ul>
+<li>It doesn&#39;t have any HTML markup inside the body tag. The HTML is built dynamically in JavaScript in the app.js file.</li>
+<li>It uses ratchet.css. <a href="http://goratchet.com/">Ratchet</a> is a simple CSS toolkit that provides styles for mobile applications.</li>
+<li>It uses <a href="https://github.com/ccoenraets/forcejs">ForceJS</a> to integrate with Salesforce.</li>
+<li>It makes an Ajax call to the server to get the Connected App Id</li>
+</ul></li>
+<li><p>Examine the code in <strong>client/js/app.js</strong>:</p>
+
+<ul>
+<li>It includes the basic logic to manage a single page application and generate HTML pages on the fly.</li>
+<li>The <strong>getSessionList()</strong> function is responsible for retrieving the list of sessions from your Salesforce instance.</li>
+<li>The <strong>getSessionDetails()</strong> function is responsible for retrieving the details of a specific session from your Salesforce instance.</li>
+<li>The <strong>showSessionList()</strong> function is responsible for generating the HTML for the session list page</li>
+<li>The <strong>showSessionDetails()</strong> function is responsible for generating the HTML for the session details page</li>
+<li>The <strong>router</strong> object is responsible for detecting hashtag changes in the URL and loading the corresponding page </li>
+</ul></li>
+<li><p>Examine the code in <strong>client/oauthcallback.html</strong>:</p>
+
+<p>At the end of the OAuth workflow, the Salesforce authentication process loads the redirect URI you specified in your Connected App and passes the access token and other OAuth values (server instance, refresh token, etc.) in the query string. oauthcallback.html simply passes that information to the ForceJS library which uses it to make REST API calls to your Salesforce instance.</p></li>
+<li><p>Examine the code in <strong>server.js</strong>. server.js implements a small HTTP server that provides two features:</p>
+
+<ul>
+<li>Web server for static content. The document root for the web server is the client directory.</li>
+<li>Proxy for Salesforce REST requests. Because of the browser’s cross-origin restrictions, your JavaScript application hosted on your own server (or localhost) will not be able to make API calls directly to the *.salesforce.com domain. The solution is to proxy your API calls through your own server.</li>
+</ul></li>
+</ol>
+
+<h2>Step 4: Deploy the Application</h2>
+
+<ol>
+<li><p>In the repository <a href="https://github.com/ccoenraets/salesforce-conference-demo">home page</a>, click the <strong>Deploy to Heroku</strong> button
+<img src="images/heroku_deploy.png" alt=""></p>
+
+<ul>
+<li>For <strong>App Name</strong>, specify a name for your application. For example, if you specify awesome-conference, your application will be available at https://awesome-conference.herokuapp.com. Your app name has to be unique on the herokuapp.com domain, so you may have to try a few names before finding one that&#39;s available.</li>
+<li>For <strong>APP_ID</strong>, paste the consumer key of the connected app you created in step&nbsp;1.
+<img src="images/consumer_key.png" alt=""></li>
+<li>Click the <strong>Deploy For Free</strong> button</li>
+</ul></li>
+<li><p>In Salesforce, go back to your Connected App (Build &gt; Create &gt; Apps) and adjust the OAuth Callback URL based on your Heroku app name. For example: https://awesome-conference.herokuapp.com/oauthcallback.html
+<img src="images/oauth_url.png" alt=""></p>
+
+<blockquote>
+<p>Make sure you are using <strong>https</strong> and replace <strong>awesome-conference</strong> with your own app name.</p>
+</blockquote></li>
+<li><p>Click <strong>Save</strong> and <strong>Continue</strong></p></li>
+</ol>
+
+<h2>Step 5: Test the Application</h2>
+
+<ol>
+<li><p>Open a browser and access your application&#39;s URL on Heroku. For example: https://awesome-conference.herokuapp.com</p>
+
+<ul>
+<li>Make sure you use <strong>https</strong></li>
+<li>Replace <strong>awesome-conference</strong> with your own app name</li>
+<li>Your browser may block the OAuth authentication popup dialog. If that happens, make sure you enable the popup dialog.</li>
+<li>If you get an error message (error=redirect<em>uri</em>mismatch&amp;error<em>description=redirect</em>uri%20must%20match%20configuration) in the popup dialog, wait for a few minutes and try again: the changes you made to the OAuth callback URL in the previous step take a few minutes to become available.</li>
+</ul></li>
+<li><p>Login with your Developer Edition credentials</p></li>
+<li><p>You should now see the list of sessions</p></li>
+<li><p>Click a session to see the details</p></li>
+</ol>
+
+<blockquote>
+<p>This is just the starting point for building a custom application written in JavaScript, authenticating with Salesforce using OAuth, and accessing Salesforce data using the REST APIs. If you are planning on building a real-life application based on this architecture, consider using a JavaScript framework such as <a href="http://backbonejs.org/">Backbone.js</a> or <a href="https://angularjs.org/">AngularJS</a> with <a href="http://ionicframework.com/">Ionic</a>.</p>
+</blockquote>
+
+<h2>Extra Credit: Running Your Own Node.js Server</h2>
+
+<p>Follow <a href="Using-the-Salesforce1-Platform-APIs.html">these</a> instructions.</p>
+
+<div class="row" style="margin-top:40px;">
+<div class="col-sm-12">
+<a href="Using-JavaScript-in-Visualforce-Pages.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> Previous</a>
+<a href="Using-Static-Resources.html" class="btn btn-default pull-right">Next <i class="glyphicon glyphicon-chevron-right"></i></a>
+</div>
+
+<p></div></p>
+
+
+
+        <div class="row" style="margin-top: 30px;">
+            <div class="col-xs-12">
+                <div id="disqus_thread"></div>
+                <script type="text/javascript">
+                    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                    var disqus_shortname = 'salesforcedeveloperworkshop'; // required: replace example with your forum shortname
+
+                    /* * * DON'T EDIT BELOW THIS LINE * * */
+                    (function() {
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="col-xs-12 col-sm-4 right-nav">
+
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading" style="font-variant:small-caps;font-size: 18px;">modules</div>
+            <ol class="list-group">
+                <li><a href="create-developer-edition.html">Creating a Developer Edition Account</a></li>
+                <li><a href="setup-environment.html">Setting Up Your Environment</a></li>
+                <li><a href="create-apex-controller.html">Creating an Apex Controller</a></li>
+                <li><a href="create-lightning-application.html">Creating the Application</a></li>
+                <li><a href="create-contactlist-component.html">Creating the ContactList Component</a></li>
+                <li><a href="create-searchbar-component.html">Creating the SearchBar Component</a></li>
+                <li><a href="create-contactdetails-component.html">Creating the ContactDetails Component</a></li>
+            </ol>
+            <hr/>
+            <div style="margin: -8px 0 12px 14px">
+                <a href="next.html">Next Steps</a>
+            </div>
+        </div>
+<a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-url="http://ccoenraets.github.io/salesforce-developer-workshop" data-text="Salesforce Developer Workshop: New fast-track tutorial to #Salesforce development">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+
+    </div>
+
+</div>
+
+</div>
+
+<div class="container">
+    <div id="footer">
+        <p class="text-muted">Salesforce Developer Workshop, 2014.</p>
+    </div>    <!-- Site footer -->
+</div>
+
+
+<script src="lib/jquery.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
