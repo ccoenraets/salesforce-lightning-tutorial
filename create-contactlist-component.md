@@ -61,30 +61,7 @@ In this module, you create a Lightning Component responsible for displaying the 
 
     ```
     ({
-        doInit : function(component, event, helper) {
-            helper.getContacts(component);
-        }
-    })
-    ```
-
-    ### Code Highlights:
-    - The controller has a single function called **doInit**. This is the function the component calls when it is initialized.
-    - The doInit() function invokes the component helper's **getContacts()** function to retrieve the list of contacts.
-
-1. Click **File** > **Save** to save the file
-
-
-## Step 3: Implement the Helper
-
-1. Click **HELPER**
-
-    ![](images/component-helper.jpg)
-
-1. Implement the Helper as follows:
-
-    ```
-    ({
-        getContacts : function(component) {
+        doInit : function(component, event) {
             var action = component.get("c.findAll");
             action.setCallback(this, function(a) {
                 component.set("v.contacts", a.getReturnValue());
@@ -95,14 +72,15 @@ In this module, you create a Lightning Component responsible for displaying the 
     ```
 
     ### Code Highlights:
-    - You first get a reference to the **findAll()** method in the component's server-side controller (ContactController), and store it in the **action** variable.
-    - Since the call to the server findAll() method is asynchronous, you register a callback function that is executed when the call returns. In the callback function, you simply assign the list of contacts returned by the server to the component's **contacts** attribute.
+    - The controller has a single function called **doInit**. This is the function the component calls when it is initialized.
+    - The function first gets a reference to the **findAll()** method in the component's server-side controller (ContactController), and store it in the **action** variable.
+    - Since the call to the server findAll() method is asynchronous, it then registers a callback function that is executed when the call returns. In the callback function, it simply assigns the returned list of contacts to the component's **contacts** attribute.
     - $A.enqueueAction(action) sends the request the server. More precisely, it adds the call to the queue of asynchronous server calls. That queue is an optimization feature of Lightning.
 
 1. Click **File** > **Save** to save the file
 
 
-## Step 4: Add ContactList to the Application UI
+## Step 3: Add ContactList to the Application UI
 
 1. In the developer console, go back to the **QuickContacts** application.
 
@@ -137,7 +115,7 @@ In this module, you create a Lightning Component responsible for displaying the 
     ![](images/app-v2.png)
 
 
-## Step 5: Style the Component
+## Step 4: Style the Component
 
 There is probably too much space above and below the phone number. In this step, you'll add a style to the component to remove the extra space.
 

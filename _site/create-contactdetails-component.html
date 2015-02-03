@@ -113,8 +113,15 @@
     locationChange : function(component, event, helper) {
         var token = event.getParam(&quot;token&quot;);
         if (token.indexOf(&#39;contact/&#39;) === 0) {
-            var contactId = token.substr(token.indexOf(&#39;/&#39;) +1);
-            helper.findById(component, contactId);
+            var contactId = token.substr(token.indexOf(&#39;/&#39;) + 1);
+            var action = component.get(&quot;c.findById&quot;);
+            action.setParams({
+              &quot;contactId&quot;: contactId
+            });
+            action.setCallback(this, function(a) {
+                component.set(&quot;v.contact&quot;, a.getReturnValue());
+            });
+            $A.enqueueAction(action);
         }
     }
 })
@@ -122,28 +129,7 @@
 <li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</p></li>
 </ol>
 
-<h2>Step 3: Implement the Helper</h2>
-
-<ol>
-<li><p>Click <strong>HELPER</strong> (upper right corner in the code editor)</p></li>
-<li><p>Implement the helper as follows:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">({
-    findById : function(component, contactId) {
-        var action = component.get(&quot;c.findById&quot;);
-        action.setParams({
-          &quot;contactId&quot;: contactId
-        });
-        action.setCallback(this, function(a) {
-            component.set(&quot;v.contact&quot;, a.getReturnValue());
-        });
-        $A.enqueueAction(action);
-    }
-})
-</code></pre></div></li>
-<li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</p></li>
-</ol>
-
-<h2>Step 4: Style the Application</h2>
+<h2>Step 3: Style the Application</h2>
 
 <ol>
 <li><p>Click <strong>STYLE</strong> (upper right corner in the code editor)</p></li>
@@ -163,7 +149,7 @@
 <li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</p></li>
 </ol>
 
-<h2>Step 5: Add ContactDetails to the Application</h2>
+<h2>Step 4: Add ContactDetails to the Application</h2>
 
 <ol>
 <li><p>In the Developer Console, go back to the <strong>QuickContacts</strong> application and modify the container layout as follows to add the ContactDetails component to the right of the list:</p>

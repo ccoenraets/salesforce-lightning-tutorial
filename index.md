@@ -11,7 +11,7 @@ The Lightning Application uses three Lightning Components: SearchBar, ContactLis
 ## What You Will Learn
 
 - Enable Lightning Components in your Salesforce org
-- Create an Apex Controller that exposes data and logic to Lightning applications
+- Create an Apex Controller that exposes data and logic to Lightning Applications
 - Create a Lightning Application
 - Create Lightning Components
 - Create Lightning Events

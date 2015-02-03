@@ -127,29 +127,7 @@
 <p><img src="images/component-controller.jpg" alt=""></p></li>
 <li><p>Implement the Controller as follows:</p>
 <div class="highlight"><pre><code class="text language-text" data-lang="text">({
-    doInit : function(component, event, helper) {
-        helper.getContacts(component);
-    }
-})
-</code></pre></div>
-<h3>Code Highlights:</h3>
-
-<ul>
-<li>The controller has a single function called <strong>doInit</strong>. This is the function the component calls when it is initialized.</li>
-<li>The doInit() function invokes the component helper&#39;s <strong>getContacts()</strong> function to retrieve the list of contacts.</li>
-</ul></li>
-<li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</p></li>
-</ol>
-
-<h2>Step 3: Implement the Helper</h2>
-
-<ol>
-<li><p>Click <strong>HELPER</strong></p>
-
-<p><img src="images/component-helper.jpg" alt=""></p></li>
-<li><p>Implement the Helper as follows:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">({
-    getContacts : function(component) {
+    doInit : function(component, event) {
         var action = component.get(&quot;c.findAll&quot;);
         action.setCallback(this, function(a) {
             component.set(&quot;v.contacts&quot;, a.getReturnValue());
@@ -161,14 +139,15 @@
 <h3>Code Highlights:</h3>
 
 <ul>
-<li>You first get a reference to the <strong>findAll()</strong> method in the component&#39;s server-side controller (ContactController), and store it in the <strong>action</strong> variable.</li>
-<li>Since the call to the server findAll() method is asynchronous, you register a callback function that is executed when the call returns. In the callback function, you simply assign the list of contacts returned by the server to the component&#39;s <strong>contacts</strong> attribute.</li>
+<li>The controller has a single function called <strong>doInit</strong>. This is the function the component calls when it is initialized.</li>
+<li>The function first gets a reference to the <strong>findAll()</strong> method in the component&#39;s server-side controller (ContactController), and store it in the <strong>action</strong> variable.</li>
+<li>Since the call to the server findAll() method is asynchronous, it then registers a callback function that is executed when the call returns. In the callback function, it simply assigns the returned list of contacts to the component&#39;s <strong>contacts</strong> attribute.</li>
 <li>$A.enqueueAction(action) sends the request the server. More precisely, it adds the call to the queue of asynchronous server calls. That queue is an optimization feature of Lightning.</li>
 </ul></li>
 <li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</p></li>
 </ol>
 
-<h2>Step 4: Add ContactList to the Application UI</h2>
+<h2>Step 3: Add ContactList to the Application UI</h2>
 
 <ol>
 <li><p>In the developer console, go back to the <strong>QuickContacts</strong> application.</p>
@@ -197,7 +176,7 @@
 <p><img src="images/app-v2.png" alt=""></p></li>
 </ol>
 
-<h2>Step 5: Style the Component</h2>
+<h2>Step 4: Style the Component</h2>
 
 <p>There is probably too much space above and below the phone number. In this step, you&#39;ll add a style to the component to remove the extra space.</p>
 

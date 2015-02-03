@@ -50,8 +50,15 @@ In this module, you create the ContactDetails component. When the user selects a
         locationChange : function(component, event, helper) {
             var token = event.getParam("token");
             if (token.indexOf('contact/') === 0) {
-                var contactId = token.substr(token.indexOf('/') +1);
-                helper.findById(component, contactId);
+                var contactId = token.substr(token.indexOf('/') + 1);
+                var action = component.get("c.findById");
+                action.setParams({
+                  "contactId": contactId
+                });
+                action.setCallback(this, function(a) {
+                    component.set("v.contact", a.getReturnValue());
+                });
+                $A.enqueueAction(action);
             }
         }
     })
@@ -59,30 +66,7 @@ In this module, you create the ContactDetails component. When the user selects a
 
 1. Click **File** > **Save** to save the file
 
-## Step 3: Implement the Helper
-
-1. Click **HELPER** (upper right corner in the code editor)
-
-1. Implement the helper as follows:
-
-    ```
-    ({
-        findById : function(component, contactId) {
-            var action = component.get("c.findById");
-            action.setParams({
-              "contactId": contactId
-            });
-            action.setCallback(this, function(a) {
-                component.set("v.contact", a.getReturnValue());
-            });
-            $A.enqueueAction(action);
-        }
-    })
-    ```
-
-1. Click **File** > **Save** to save the file
-
-## Step 4: Style the Application
+## Step 3: Style the Application
 
 1. Click **STYLE** (upper right corner in the code editor)
 
@@ -104,7 +88,7 @@ In this module, you create the ContactDetails component. When the user selects a
 
 1. Click **File** > **Save** to save the file
 
-## Step 5: Add ContactDetails to the Application
+## Step 4: Add ContactDetails to the Application
 
 1. In the Developer Console, go back to the **QuickContacts** application and modify the container layout as follows to add the ContactDetails component to the right of the list:
 
