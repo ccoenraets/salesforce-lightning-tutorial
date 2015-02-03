@@ -2,8 +2,8 @@
 layout: home
 title: Salesforce Developer Workshop
 ---
-In this tutorial, you use the Lightning Components to build a an application called QuickContacts. The application provides quick access to your Salesforce Contacts.
-It is build as one Lightning Application and three Lightning Components: SearchBar, ContactList, and ContactDetails.
+In this tutorial, you use the Lightning Components to build an application called QuickContacts. The application provides quick access to your Salesforce Contacts.
+The Lightning Application uses three Lightning Components: SearchBar, ContactList, and ContactDetails. These components communicate using Lightning events.
 
 <img src="images/app-map.png" style="border:none;"/>
 
@@ -15,9 +15,8 @@ It is build as one Lightning Application and three Lightning Components: SearchB
 - Create a Lightning Application
 - Create Lightning Components
 - Create Lightning Events
-- Communicate between Components using Lightning events
-- Use Static Resources in a Lightning application
-- Implement routing in a single page application
+- Communicate between Lightning Components using Lightning Events
+- Use Static Resources in a Lightning Application
 
 
 
