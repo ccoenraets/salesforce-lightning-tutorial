@@ -5,7 +5,7 @@ title: Module 6&#58; Creating the Search Bar Component
 
 In this module, you add a SearchBar to allow the user to search contacts by name. You could add the SearchBar to the contactList component, but that would limit the reusability of the component: depending on specific UI requirements, you may want the SearchBar to be directly on top of the list (like you'll do here), integrated in the header, or somewhere else. You also want the ContactList component to display a list of contacts independently of the type of SearchBar you use: regular input field with search button, type ahead search, etc. For these reasons, it is a good idea to decouple the search UI, from the display UI, and create two components: ContactList and SearchBar.
 
-### What you will learn:
+## What you will learn:
 
 - Create custom events
 - Communicate between components using events
