@@ -1,6 +1,6 @@
 ---
 layout: module
-title: Module 6&#58; Creating the Search Bar Component
+title: Module 6&#58; Creating the SearchBar Component
 ---
 
 In this module, you create a SearchBar component that allows the user to search contacts by name. You could add the search bar to the ContactList component, but that would limit the reusability of the component: depending on specific UI requirements, you may want the search bar to be directly on top of the list (like you'll do here), integrated in the header, or somewhere else. You also want the ContactList component to be able to display a list of contacts independently of the type of search bar you use: regular input field with search button, type ahead search, etc. For these reasons, it's a good idea to decouple the search UI, from the display UI, and create two components: ContactList and SearchBar.
@@ -24,7 +24,7 @@ Now that we decided to build SearchBar and ContactList as two separate component
     </aura:event>
     ```
     ### Code Highlights:
-    - The event holds one argument: the new searchKey
+    - The event holds one argument: the new **searchKey**
 
 1. Click **File** > **Save** to save the file
 
@@ -44,7 +44,7 @@ Now that we decided to build SearchBar and ContactList as two separate component
     ```
     ### Code Highlights:
     - This is a simple component with a single input field.
-    - When the user types in a character (**onkeyup**), the **searchKeyChange()** function is executed in the component's client-side controller (you'll code that function in the next step).
+    - When the user types in a character (**onkeyup**), the **searchKeyChange()** function is executed in the component's client-side controller (you'll code that function in the next step). Using this approach the search is refined every time the user types in a character.
 
 
 1. Click **File** > **Save** to save the file
@@ -60,7 +60,7 @@ Now that we decided to build SearchBar and ContactList as two separate component
     ({
         searchKeyChange: function(component, event, helper) {
             var myEvent = $A.get("e.yournamespace:SearchKeyChange");
-            myEvent.setParams({ "searchKey": event.target.value});
+            myEvent.setParams({"searchKey": event.target.value});
             myEvent.fire();
         }
     })
@@ -70,7 +70,7 @@ Now that we decided to build SearchBar and ContactList as two separate component
 
     ### Code Highlights:
     - The function first gets an instance of the **SearchKeyChange** event
-    - It then sets the event's searchKey parameter to the current value in the input field
+    - It then sets the event's searchKey parameter to the input field's new value
     - Finally, it fires the event so that registered listeners can catch it
 
 1. Click **File** > **Save** to save the file
@@ -89,24 +89,17 @@ Now that we decided to build SearchBar and ContactList as two separate component
     > Make sure you prefix SearchKeyChange with **your own namespace** you created in module 2.
 
 
+    ### Code Highlight:
+    - The handler is set up to execute the **searchKeyChange()** function in the controller
+
+
 1. Click **CONTROLLER** (upper right corner in the code editor)
 
 1. Add the **searchKeyChange()** function implemented as follows:
 
     ```
-    searchKeyChange: function(component, event, helper) {
-        helper.findByName(component, event.getParam("searchKey"));
-    }
-    ```
-
-    > Make sure you separate the doInit() and the searchKeyChange() functions by a comma.
-
-1. Click **HELPER** (upper right corner in the code editor)
-
-1. Add the **findByName()** function implemented as follows:
-
-    ```
-	findByName : function(component, searchKey) {
+    searchKeyChange: function(component, event) {
+        var searchKey = event.getParam("searchKey");
         var action = component.get("c.findByName");
         action.setParams({
           "searchKey": searchKey
@@ -115,8 +108,11 @@ Now that we decided to build SearchBar and ContactList as two separate component
         	component.set("v.contacts", a.getReturnValue());
         });
         $A.enqueueAction(action);
-	}
+    }
     ```
+
+    > Make sure you separate the doInit() and the searchKeyChange() functions with a comma
+
 
 1. Click **File** > **Save** to save the file
 

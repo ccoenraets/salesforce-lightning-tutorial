@@ -67,7 +67,7 @@
 <div class="row">
 
     <div class="col-xs-12 col-sm-8">
-        <h1>Module 6&#58; Creating the Search Bar Component</h1>
+        <h1>Module 6&#58; Creating the SearchBar Component</h1>
         <!--<hr/>-->
         <p>In this module, you create a SearchBar component that allows the user to search contacts by name. You could add the search bar to the ContactList component, but that would limit the reusability of the component: depending on specific UI requirements, you may want the search bar to be directly on top of the list (like you&#39;ll do here), integrated in the header, or somewhere else. You also want the ContactList component to be able to display a list of contacts independently of the type of search bar you use: regular input field with search button, type ahead search, etc. For these reasons, it&#39;s a good idea to decouple the search UI, from the display UI, and create two components: ContactList and SearchBar.</p>
 
@@ -92,7 +92,7 @@
 <h3>Code Highlights:</h3>
 
 <ul>
-<li>The event holds one argument: the new searchKey</li>
+<li>The event holds one argument: the new <strong>searchKey</strong></li>
 </ul></li>
 <li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</p></li>
 </ol>
@@ -113,7 +113,7 @@
 
 <ul>
 <li>This is a simple component with a single input field.</li>
-<li>When the user types in a character (<strong>onkeyup</strong>), the <strong>searchKeyChange()</strong> function is executed in the component&#39;s client-side controller (you&#39;ll code that function in the next step).</li>
+<li>When the user types in a character (<strong>onkeyup</strong>), the <strong>searchKeyChange()</strong> function is executed in the component&#39;s client-side controller (you&#39;ll code that function in the next step). Using this approach the search is refined every time the user types in a character.</li>
 </ul></li>
 <li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</p></li>
 </ol>
@@ -126,7 +126,7 @@
 <div class="highlight"><pre><code class="text language-text" data-lang="text">({
     searchKeyChange: function(component, event, helper) {
         var myEvent = $A.get(&quot;e.yournamespace:SearchKeyChange&quot;);
-        myEvent.setParams({ &quot;searchKey&quot;: event.target.value});
+        myEvent.setParams({&quot;searchKey&quot;: event.target.value});
         myEvent.fire();
     }
 })
@@ -139,7 +139,7 @@
 
 <ul>
 <li>The function first gets an instance of the <strong>SearchKeyChange</strong> event</li>
-<li>It then sets the event&#39;s searchKey parameter to the current value in the input field</li>
+<li>It then sets the event&#39;s searchKey parameter to the input field&#39;s new value</li>
 <li>Finally, it fires the event so that registered listeners can catch it</li>
 </ul></li>
 <li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</p></li>
@@ -154,19 +154,17 @@
 </code></pre></div>
 <blockquote>
 <p>Make sure you prefix SearchKeyChange with <strong>your own namespace</strong> you created in module 2.</p>
-</blockquote></li>
+</blockquote>
+
+<h3>Code Highlight:</h3>
+
+<ul>
+<li>The handler is set up to execute the <strong>searchKeyChange()</strong> function in the controller</li>
+</ul></li>
 <li><p>Click <strong>CONTROLLER</strong> (upper right corner in the code editor)</p></li>
 <li><p>Add the <strong>searchKeyChange()</strong> function implemented as follows:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">searchKeyChange: function(component, event, helper) {
-    helper.findByName(component, event.getParam(&quot;searchKey&quot;));
-}
-</code></pre></div>
-<blockquote>
-<p>Make sure you separate the doInit() and the searchKeyChange() functions by a comma.</p>
-</blockquote></li>
-<li><p>Click <strong>HELPER</strong> (upper right corner in the code editor)</p></li>
-<li><p>Add the <strong>findByName()</strong> function implemented as follows:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">findByName : function(component, searchKey) {
+<div class="highlight"><pre><code class="text language-text" data-lang="text">searchKeyChange: function(component, event) {
+    var searchKey = event.getParam(&quot;searchKey&quot;);
     var action = component.get(&quot;c.findByName&quot;);
     action.setParams({
       &quot;searchKey&quot;: searchKey
@@ -176,7 +174,10 @@
     });
     $A.enqueueAction(action);
 }
-</code></pre></div></li>
+</code></pre></div>
+<blockquote>
+<p>Make sure you separate the doInit() and the searchKeyChange() functions with a comma</p>
+</blockquote></li>
 <li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</p></li>
 </ol>
 
