@@ -68,27 +68,31 @@
     <div class="col-xs-12 col-sm-8">
         <h1>Module 7&#58; Creating the Contact Details Component</h1>
         <!--<hr/>-->
-        <h2>Step 1: Create a custom event:</h2>
+        <h2>Step 1: Create the ContactDetails Component</h2>
 
 <ol>
 <li><p>In the Developer Console, click <strong>File</strong> &gt; <strong>New</strong> &gt; <strong>Lightning Component</strong>. Specify <strong>ContactDetails</strong> as the bundle name and click <strong>Submit</strong></p></li>
 <li><p>Implement the component as follows:</p>
 <div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;aura:component controller=&quot;cc01.ContactController&quot;&gt;
 
-    &lt;aura:handler event=&quot;aura:locationChange&quot; action=&quot;{!c.locationChange}&quot;/&gt;
-    &lt;aura:attribute name=&quot;contact&quot; type=&quot;Contact&quot; default=&quot;{&#39;sobjectType&#39;: &#39;Contact&#39;}&quot;/&gt;
+&lt;aura:handler event=&quot;aura:locationChange&quot; action=&quot;{!c.locationChange}&quot;/&gt;
+&lt;aura:attribute name=&quot;contact&quot; type=&quot;Contact&quot; default=&quot;{&#39;sobjectType&#39;: &#39;Contact&#39;}&quot;/&gt;
 
-    &lt;div class=&quot;details&quot;&gt;
-        &lt;h1&gt;{! v.contact.Name }&lt;/h1&gt;
-        &lt;h3&gt;{! v.contact.Account.Name }&lt;/h3&gt;
-        &lt;h3&gt;{! v.contact.Title }&lt;/h3&gt;
-        &lt;p&gt;{! v.contact.Phone }&lt;/p&gt;
-        {! v.contact.MobilePhone }
-    &lt;/div&gt;
-
-&lt;/aura:component&gt;
+&lt;div class=&quot;details&quot;&gt;
+    &lt;h1&gt;{! v.contact.Name }&lt;/h1&gt;
+    &lt;h3&gt;{! v.contact.Account.Name }&lt;/h3&gt;
+    &lt;h3&gt;{! v.contact.Title }&lt;/h3&gt;
+    &lt;p&gt;{! v.contact.Phone }&lt;/p&gt;
+    {! v.contact.MobilePhone }
+&lt;/div&gt;
 </code></pre></div></li>
-<li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</p></li>
+</ol>
+
+<p><a href="/aura:component">/aura:component</a>
+    ```</p>
+
+<ol>
+<li>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</li>
 </ol>
 
 <h2>Step 2: Implement the Controller</h2>
@@ -128,29 +132,50 @@
 </code></pre></div></li>
 </ol>
 
-<h2>Step 4: Add the contactDetails Component to the Application</h2>
+<h2>Step 4: Add Styles</h2>
+
+<ol>
+<li><p>Click <strong>STYLE</strong></p></li>
+<li><p>Add the following styles</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">.THIS p {
+    margin: 20px 0 2px 0;
+}
+
+.THIS h1 {
+    margin: 0 0 10px 0;
+}
+
+.THIS h3 {
+    margin: 4px 0;
+}
+</code></pre></div></li>
+</ol>
+
+<h2>Step 5: Add the ContactDetails Component to the Application</h2>
 
 <ol>
 <li><p>In the Developer Console, go back to the quickContacts application and add the contactDetails component:</p>
 <div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;div class=&quot;container&quot;&gt;
     &lt;div class=&quot;row&quot;&gt;
         &lt;div class=&quot;col-sm-4&quot;&gt;
-            &lt;cc01:searchBar/&gt;
-            &lt;cc01:contactList/&gt;
+            &lt;cc01:SearchBar/&gt;
+            &lt;cc01:ContactList/&gt;
         &lt;/div&gt;
         &lt;div class=&quot;col-sm-8&quot;&gt;
-            Details
+            &lt;cc01:ContactDetails/&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 </code></pre></div></li>
-<li><p>Click <strong>Update Preview</strong> to run the application in the browser</p></li>
+<li><p>Click <strong>Update Preview</strong> to run the application in the browser</p>
+
+<p><img src="images/app-v5.png" alt=""></p></li>
 </ol>
 
 <div class="row" style="margin-top:40px;">
 <div class="col-sm-12">
-<a href="Creating-the-Application.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> Previous</a>
-<a href="Accessing-Data-using-SOQL-and-DML.html" class="btn btn-default pull-right">Next <i class="glyphicon glyphicon-chevron-right"></i></a>
+<a href="create-searchbar-component.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> Previous</a>
+<a href="next.html" class="btn btn-default pull-right">Next <i class="glyphicon glyphicon-chevron-right"></i></a>
 </div>
 
 <p></div></p>

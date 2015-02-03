@@ -23,6 +23,6 @@ more about specific topics
 
 <div class="row" style="margin-top:40px;">
 <div class="col-sm-12">
-<a href="Batch-and-Schedule.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> Previous</a>
+<a href="create-contactdetails-component.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> Previous</a>
 </div>
 </div>

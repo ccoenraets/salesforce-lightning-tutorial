@@ -2,31 +2,23 @@
 layout: home
 title: Salesforce Developer Workshop
 ---
-In this tutorial, you use the Salesforce Platform to build a conference management application that allows conference 
-administrators to manage all the
-aspects of a conference: sessions, speakers, hotels, etc. You also create a simple consumer-facing application that allows conference attendees to view the conference schedule, and learn more about sessions and speakers.
+In this tutorial, you use the Lightning Components to build a an application called QuickContacts. The application provides quick access to your Salesforce Contacts.
+It is build as one Lightning Application and three Lightning Components: SearchBar, ContactList, and ContactDetails.
+
+<img src="images/app-map.png" style="border:none;"/>
+
 
 ## What You Will Learn
 
-- Create Custom Objects
-- Use declarative features of the platform to create an Application, create Tabs, and optimize Page Layouts
-- Create Apex Classes
-- Use SOQL and DML to query, create, update and delete data
-- Create Triggers
-- Create Visualforce Pages
-- Create Controller Extensions and Custom Controllers
-- Use JavaScript in Visualforce Pages
-- Authenticate using OAuth
-- Access Salesforce data from JavaScript using JavaScript Remoting
-- Create a Custom Application using the REST APIs
-- Create Unit Tests
-- Create Batch Processes
+- Enable Lightning Components in your Salesforce org
+- Create an Apex Controller that exposes data and logic to Lightning applications
+- Create a Lightning Application
+- Create Lightning Components
+- Create Lightning Events
+- Communicate between Components using Lightning events
+- Use Static Resources in a Lightning application
+- Implement routing in a single page application
 
-## Prerequisites
-
-- To complete this workshop, all you need is a modern browser and a connection to the Internet
-- No prior knowledge of Salesforce is required
-- A working knowledge of Object-Oriented Programming is assumed
 
 
 ## Browser Requirements
@@ -40,13 +32,13 @@ The following browsers are supported when working with the Developer Console:
 
 ## Issues
 
-- Please create an issue [here](https://github.com/ccoenraets/salesforce-developer-workshop/issues) if you run 
+- Please create an issue [here](https://github.com/ccoenraets/salesforce-lightning-tutorial/issues) if you run
 into any problem or if you have a suggestion to improve this workshop.
 - You can also use the Comments section at the bottom of each module to ask a question or report a problem.
 
 
 <div class="row" style="margin-top:40px;">
 <div class="col-sm-12">
-<a href="Creating-a-Developer-Edition-Account.html" class="btn btn-default pull-right">Next <i class="glyphicon glyphicon-chevron-right"></i></a>
+<a href="create-developer-edition.html" class="btn btn-default pull-right">Next <i class="glyphicon glyphicon-chevron-right"></i></a>
 </div>
 </div>
