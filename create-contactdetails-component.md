@@ -7,8 +7,8 @@ In this module, you create the ContactDetails component. When the user selects a
 
 ## What you will learn
 
-- Use Lightning's locationChange event as an application routing mechanism
-- Track the state of an application using the URL's hashtag
+- Manage the state of a Lightning application using the URL's hashtag
+- Use Lightning's locationChange event
 
 
 ## Step 1: Create the ContactDetails Component
@@ -20,20 +20,25 @@ In this module, you create the ContactDetails component. When the user selects a
     ```
     <aura:component controller="yournamespace.ContactController">
 
-        <aura:handler event="aura:locationChange" action="{!c.locationChange}"/>
         <aura:attribute name="contact" type="Contact" default="{'sobjectType': 'Contact'}"/>
+        <aura:handler event="aura:locationChange" action="{!c.locationChange}"/>
 
         <div class="details">
-            <h1>{! v.contact.Name }</h1>
-            <h3>{! v.contact.Account.Name }</h3>
-            <h3>{! v.contact.Title }</h3>
-            <p>{! v.contact.Phone }</p>
-            {! v.contact.MobilePhone }
+            <h1>{!v.contact.Name}</h1>
+            <h3>{!v.contact.Account.Name}</h3>
+            <h3>{!v.contact.Title}</h3>
+            <p>{!v.contact.Phone}</p>
+            {!v.contact.MobilePhone}
         </div>
 
     </aura:component>
     ```
     > Make sure you prefix the controller name with **your own namespace** you created in module 2.
+
+    ### Code Highlights
+    - The controller assigned to the component (first line of code) refers to the **server-side controller** (ContactController) you created in module 3.
+    - The **contact** attribute is defined to hold the displayed Contact.
+    - In the ContactList component you created in module 5, you wrapped each contact in the list with a ```<a href="{! '#contact/' + contact.Id }">``` anchor tag that sets the page hashtag to **#contact/** followed by the contact id of the clicked contact. In this component, the **locationChange** handler is defined to listen to hashtag changes, and execute the controller's locationChange() when it happens. The locationChange() function implemented in the next step retrieves and displays the selected contact.
 
 
 1. Click **File** > **Save** to save the file

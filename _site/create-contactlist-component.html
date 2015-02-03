@@ -115,6 +115,7 @@
 <li>The <strong>init</strong> handler is defined to execute some code when the component is initialized. That code (<strong>doInit</strong>) is defined in the component
 <strong>client-side controller</strong>. (you&#39;ll implement the controller in the next step)</li>
 <li><code>&lt;aura:iteration&gt;</code> is used to iterate through the list of contacts and create an <code>&lt;li&gt;</code> for each contact</li>
+<li>The <code>&lt;a href=&quot;{! &#39;#contact/&#39; + contact.Id }&quot;&gt;</code> anchor tag around the contact data is defined to set the page hashtag to <strong>#contact/</strong> followed by the contact id. In module 7, the ContactDetails component will use that hashtag to display details information every time the user clicks a new contact.</li>
 </ul></li>
 <li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</p></li>
 </ol>

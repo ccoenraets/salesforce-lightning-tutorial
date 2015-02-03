@@ -46,6 +46,7 @@ In this module, you create a Lightning Component responsible for displaying the 
     - The **init** handler is defined to execute some code when the component is initialized. That code (**doInit**) is defined in the component
 **client-side controller**. (you'll implement the controller in the next step)
     - ```<aura:iteration>``` is used to iterate through the list of contacts and create an ```<li>``` for each contact
+    - The ```<a href="{! '#contact/' + contact.Id }">``` anchor tag around the contact data is defined to set the page hashtag to **#contact/** followed by the contact id. In module 7, the ContactDetails component will use that hashtag to display details information every time the user clicks a new contact.
 
 
 1. Click **File** > **Save** to save the file
