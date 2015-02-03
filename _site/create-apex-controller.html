@@ -15,6 +15,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/styles.css" rel="stylesheet">
+    <link href="css/syntax.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -84,26 +85,26 @@
 <p><img src="images/devconsole.jpg" alt=""></p></li>
 <li><p>In the Developer Console, click <strong>File</strong> &gt; <strong>New</strong> &gt; <strong>Apex Class</strong>. Specify <strong>ContactController</strong> as the class name and click <strong>OK</strong>.</p></li>
 <li><p>Implement the class as follows:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">public class ContactController {
+<div class="highlight"><pre><code class="java language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ContactController</span> <span class="o">{</span>
 
-    @AuraEnabled
-    public static List&lt;Contact&gt; findAll() {
-        return [SELECT id, name, phone FROM Contact LIMIT 50];
-    }
+    <span class="nd">@AuraEnabled</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Contact</span><span class="o">&gt;</span> <span class="nf">findAll</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="o">[</span><span class="n">SELECT</span> <span class="n">id</span><span class="o">,</span> <span class="n">name</span><span class="o">,</span> <span class="n">phone</span> <span class="n">FROM</span> <span class="n">Contact</span> <span class="n">LIMIT</span> <span class="mi">50</span><span class="o">];</span>
+    <span class="o">}</span>
 
-    @AuraEnabled
-    public static List&lt;Contact&gt; findByName(String searchKey) {
-        String name = &#39;%&#39; + searchKey + &#39;%&#39;;
-        return [SELECT id, name, phone FROM Contact WHERE name LIKE :name LIMIT 50];
-    }
+    <span class="nd">@AuraEnabled</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Contact</span><span class="o">&gt;</span> <span class="nf">findByName</span><span class="o">(</span><span class="n">String</span> <span class="n">searchKey</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="sc">&#39;%&#39;</span> <span class="o">+</span> <span class="n">searchKey</span> <span class="o">+</span> <span class="sc">&#39;%&#39;</span><span class="o">;</span>
+        <span class="k">return</span> <span class="o">[</span><span class="n">SELECT</span> <span class="n">id</span><span class="o">,</span> <span class="n">name</span><span class="o">,</span> <span class="n">phone</span> <span class="n">FROM</span> <span class="n">Contact</span> <span class="n">WHERE</span> <span class="n">name</span> <span class="n">LIKE</span> <span class="o">:</span><span class="n">name</span> <span class="n">LIMIT</span> <span class="mi">50</span><span class="o">];</span>
+    <span class="o">}</span>
 
-    @AuraEnabled
-    public static Contact findById(String contactId) {
-        return [SELECT id, name, title, phone, mobilephone, Account.Name
-                    FROM Contact WHERE Id = :contactId];
-    }
+    <span class="nd">@AuraEnabled</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">Contact</span> <span class="nf">findById</span><span class="o">(</span><span class="n">String</span> <span class="n">contactId</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="o">[</span><span class="n">SELECT</span> <span class="n">id</span><span class="o">,</span> <span class="n">name</span><span class="o">,</span> <span class="n">title</span><span class="o">,</span> <span class="n">phone</span><span class="o">,</span> <span class="n">mobilephone</span><span class="o">,</span> <span class="n">Account</span><span class="o">.</span><span class="na">Name</span>
+                    <span class="n">FROM</span> <span class="n">Contact</span> <span class="n">WHERE</span> <span class="n">Id</span> <span class="o">=</span> <span class="o">:</span><span class="n">contactId</span><span class="o">];</span>
+    <span class="o">}</span>
 
-}
+<span class="o">}</span>
 </code></pre></div>
 <h3>Code Highlights:</h3>
 

@@ -19,7 +19,7 @@ Lightning applications make it easy to work with data. In this module, you creat
 
 2. Implement the class as follows:
 
-    ```
+    ```java
     public class ContactController {
 
         @AuraEnabled
