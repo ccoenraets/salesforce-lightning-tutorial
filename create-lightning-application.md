@@ -3,7 +3,7 @@ layout: module
 title: Module 4&#58; Creating the Lightning Application
 ---
 
-In this module, you create the QuickContacts Lightning application and you use Bootstrap to define a basic layout for the application.
+In this module, you create the QuickContacts Lightning Application and you use Bootstrap to define a basic layout for the application.
 
 ## What you will learn
 - Create a Lightning application in the Developer Console
@@ -43,8 +43,8 @@ In this module, you create the QuickContacts Lightning application and you use B
 
     ### Code Highlights:
     - The **link** tag references the bootstrap style sheet uploaded as a static resource in [module 2](setup-environment.html)
-    - The application uses Bootstrap to implement a basic layout for the application.
-    - Lightning applications can include Lightning components or regular HTML markup.
+    - The application uses Bootstrap to implement a basic layout for the application
+    - Lightning applications can include Lightning components or regular HTML markup
 
 1. Click **File** > **Save** to save the file
 

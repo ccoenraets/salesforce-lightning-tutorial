@@ -3,6 +3,8 @@ layout: module
 title: Module 2&#58; Setting Up Your Environment
 ---
 
+In this module, you set up your environment to enable Lightning development.
+
 ## What you will learn
 - Create a Namespace
 - Enable Lightning Components in your Salesforce org
@@ -11,11 +13,13 @@ title: Module 2&#58; Setting Up Your Environment
 
 ## Step 1: Create a Namespace
 
-Your namespace prefix must be globally unique across all Salesforce organizations. Namespace prefixes are case-insensitive and have a maximum length of 15 alphanumerical characters.
+A namespace is globally unique across all Salesforce organizations. Namespaces are case-insensitive and have a maximum length of 15 alphanumerical characters.
 
 1. Login to your Salesforce Developer Edition
 
-1. Click **Setup** (upper right corner), and then click **Create** > **Packages** in the left navigation
+1. Click **Setup** (upper right corner)
+
+1. Click **Create** > **Packages** (left navigation)
 
 1. Click **Edit** and **Continue**
 
@@ -39,11 +43,11 @@ Your namespace prefix must be globally unique across all Salesforce organization
 
 ## Step 3: Upload Bootstrap as a Static Resource
 
-To help us make the application look good, we will use a version of Twitter bootstrap customized to match the [Salesforce1 guideline](http://sfdc-styleguide.herokuapp.com/).
+To help you make the application look good, you will use a version of Twitter bootstrap customized to match the [Salesforce1 guideline](http://sfdc-styleguide.herokuapp.com/).
 
-1. Download and unzip the Salesforce Foundation Bootstrap from [here](http://developer.salesforcefoundation.org/bootstrap-sf1/)
+1. Download and unzip the Salesforce Foundation Bootstrap [here](http://developer.salesforcefoundation.org/bootstrap-sf1/)
 
-1. In Salesforce, click **Setup** (upper right corner), and then **Build** > **Develop** > **Static Resources**
+1. In Salesforce, click **Setup** > **Build** > **Develop** > **Static Resources**
 
 1. Click **New**
  

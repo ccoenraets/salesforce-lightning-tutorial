@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24e0e096-c0e0-4282-8eb6-a3b0cddf2249" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/create-developer-edition.html" afterPath="$PROJECT_DIR$/_site/create-developer-edition.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/create-developer-edition.md" afterPath="$PROJECT_DIR$/create-developer-edition.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/create-apex-controller.html" afterPath="$PROJECT_DIR$/_site/create-apex-controller.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/create-apex-controller.md" afterPath="$PROJECT_DIR$/create-apex-controller.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/create-lightning-application.html" afterPath="$PROJECT_DIR$/_site/create-lightning-application.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/create-lightning-application.md" afterPath="$PROJECT_DIR$/create-lightning-application.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/setup-environment.html" afterPath="$PROJECT_DIR$/_site/setup-environment.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setup-environment.md" afterPath="$PROJECT_DIR$/setup-environment.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="salesforce-lightning-tutorial.iws" />
@@ -28,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="create-searchbar-component.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/create-searchbar-component.md">
+      <file leaf-file-name="create-apex-controller.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/create-apex-controller.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-35.533333" vertical-offset="929" max-vertical-offset="2175">
-              <caret line="133" column="40" selection-start-line="133" selection-start-column="9" selection-end-line="133" selection-end-column="40" />
+            <state vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="1005">
+              <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -41,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create-apex-controller.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/create-apex-controller.md">
+      <file leaf-file-name="create-lightning-application.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/create-lightning-application.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.5" vertical-offset="0" max-vertical-offset="990">
-              <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.5537721" vertical-offset="0" max-vertical-offset="1246">
+              <caret line="46" column="84" selection-start-line="46" selection-start-column="84" selection-end-line="46" selection-end-column="84" />
               <folding />
             </state>
           </provider>
@@ -110,16 +114,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_layouts/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="660">
-              <caret line="6" column="97" selection-start-line="6" selection-start-column="97" selection-end-line="6" selection-end-column="97" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.md">
           <provider selected="true" editor-type-id="text-editor">
@@ -133,11 +127,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create-developer-edition.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="create-developer-edition.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/create-developer-edition.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.09630819" vertical-offset="0" max-vertical-offset="1246">
-              <caret line="6" column="250" selection-start-line="6" selection-start-column="250" selection-end-line="6" selection-end-column="250" />
+            <state vertical-scroll-proportion="-14.5" vertical-offset="0" max-vertical-offset="570">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="setup-environment.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/setup-environment.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.0" vertical-offset="0" max-vertical-offset="1155">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -160,10 +167,12 @@
         <option value="$PROJECT_DIR$/create-contactdetails-component.md" />
         <option value="$PROJECT_DIR$/next.md" />
         <option value="$PROJECT_DIR$/_config.yml" />
-        <option value="$PROJECT_DIR$/create-apex-controller.md" />
         <option value="$PROJECT_DIR$/_includes/bootstrap-header.html" />
         <option value="$PROJECT_DIR$/index.md" />
         <option value="$PROJECT_DIR$/create-developer-edition.md" />
+        <option value="$PROJECT_DIR$/setup-environment.md" />
+        <option value="$PROJECT_DIR$/create-apex-controller.md" />
+        <option value="$PROJECT_DIR$/create-lightning-application.md" />
       </list>
     </option>
   </component>
@@ -365,28 +374,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/setup-environment.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1246">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/create-lightning-application.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1246">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/font/LICENSE.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1485">
@@ -452,17 +439,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/create-apex-controller.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.5" vertical-offset="0" max-vertical-offset="990">
-          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/syntax.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1276">
@@ -492,8 +468,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/create-developer-edition.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09630819" vertical-offset="0" max-vertical-offset="1246">
-          <caret line="6" column="250" selection-start-line="6" selection-start-column="250" selection-end-line="6" selection-end-column="250" />
+        <state vertical-scroll-proportion="-14.5" vertical-offset="0" max-vertical-offset="570">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup-environment.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.0" vertical-offset="0" max-vertical-offset="1155">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/create-apex-controller.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="1005">
+          <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/create-lightning-application.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5537721" vertical-offset="0" max-vertical-offset="1246">
+          <caret line="46" column="84" selection-start-line="46" selection-start-column="84" selection-end-line="46" selection-end-column="84" />
           <folding />
         </state>
       </provider>

@@ -3,7 +3,7 @@ layout: module
 title: Module 3&#58; Creating the ContactController Class
 ---
 
-Lightning applications make it easy to work with data. In this module, you create an Apex controller that allows your Lightning application to retrieve contacts or to search contacts by name or by id.
+Lightning applications make it easy to work with data. In this module, you create an Apex controller that allows your Lightning application to retrieve contacts, or to search contacts by name or by id.
 
 ## What you will learn
 - Create an Apex Controller that exposes data and logic to the client application
@@ -45,8 +45,8 @@ Lightning applications make it easy to work with data. In this module, you creat
 
 
     ### Code Highlights:
-    - **ContactController** is a regular controller class with methods to retrieve contacts or to search contacts by name or by id.
-    - The **@AuraEnabled** annotation makes a method available to the Lightning application
+    - **ContactController** is a regular controller class with methods to retrieve contacts (findAll),  or to search contacts by name (findByName) or by id (findById).
+    - The **@AuraEnabled** method annotation makes a method available to Lightning applications
 
 1. Click **File** > **Save** to save the file
 
