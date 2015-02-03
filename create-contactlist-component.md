@@ -3,6 +3,15 @@ layout: module
 title: Module 5&#58; Creating the ContactList Component
 ---
 
+In this module, you create a Lightning Component responsible for displaying the list of contacts and you add that component to the QuickContacts application.
+
+## What you will learn
+- Create a Lightning Component in the Developer Console
+- Use component attributes
+- Use event handlers
+- Use Lightning Components in a Lightning Application
+
+
 ## Step 1: Create the Component
 
 1. In the Developer Console, click **File** > **New** > **Lightning Component**. Specify **ContactList** as the bundle name and click **Submit**
@@ -10,10 +19,10 @@ title: Module 5&#58; Creating the ContactList Component
 2. Implement the component as follows:
 
     ```
-    <aura:component controller="cc01.ContactController">
+    <aura:component controller="yournamespace.ContactController">
 
-        <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
         <aura:attribute name="contacts" type="Contact[]"/>
+        <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
 
         <ul class="list-group">
             <aura:iteration items="{!v.contacts}" var="contact">
@@ -30,9 +39,13 @@ title: Module 5&#58; Creating the ContactList Component
     ```
 
     ### Code Highlights:
-    - The **init** handler is defined to execute some code when the component is initialized. That code (**doInit**) is defined in the component **controller**. (you'll implement the controller in the next step)
+    - The controller assigned to the component (first line of code) refers to the **server-side controller** (ContactController) you created in module 3.
+
+        > Make sure you prefix the controller name with **your own namespace** you created in module 2.
     - The **contacts** attribute is defined to hold the list of Contact objects returned from the server
-    - ```<aura:iteration>``` is used to iterate through the list of contacts and create an ```<li>``` tag for each contact
+    - The **init** handler is defined to execute some code when the component is initialized. That code (**doInit**) is defined in the component
+**client-side controller**. (you'll implement the controller in the next step)
+    - ```<aura:iteration>``` is used to iterate through the list of contacts and create an ```<li>``` for each contact
 
 
 1. Click **File** > **Save** to save the file
@@ -56,7 +69,10 @@ title: Module 5&#58; Creating the ContactList Component
 
     ### Code Highlights:
     - The controller has a single function called **doInit**. This is the function the component calls when it is initialized.
-    - The doInit() function invokes the component helper **getContacts()** function to retrieve the list of contacts.
+    - The doInit() function invokes the component helper's **getContacts()** function to retrieve the list of contacts.
+
+1. Click **File** > **Save** to save the file
+
 
 ## Step 3: Implement the Helper
 
@@ -79,12 +95,14 @@ title: Module 5&#58; Creating the ContactList Component
     ```
 
     ### Code Highlights:
-    - You first get a reference to the findAll method in the component's server-side controller (ContactController) and store it in the **action** variable.
-    - Since the call to the server findAll method is asynchronous, you register a callback function that is executed when the call returns: you simply assign the list of contacts returned by the server to the component's **contacts**.
-    - $A.enqueueAction(action) actually sends the request to execute the findAll() method to the server. More precisely, it adds the call to the queue of asynchronous server calls. That queue is an optimization feature of Lightning.
+    - You first get a reference to the **findAll()** method in the component's server-side controller (ContactController), and store it in the **action** variable.
+    - Since the call to the server findAll() method is asynchronous, you register a callback function that is executed when the call returns. In the callback function, you simply assign the list of contacts returned by the server to the component's **contacts** attribute.
+    - $A.enqueueAction(action) sends the request the server. More precisely, it adds the call to the queue of asynchronous server calls. That queue is an optimization feature of Lightning.
+
+1. Click **File** > **Save** to save the file
 
 
-## Step 4: Add Contact List to the Application
+## Step 4: Add ContactList to the Application UI
 
 1. In the developer console, go back to the **QuickContacts** application.
 
@@ -99,11 +117,16 @@ title: Module 5&#58; Creating the ContactList Component
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <cc01:ContactList/>
+                <yournamespace:ContactList/>
             </div>
         </div>
     </div>
     ```
+
+    > Make sure you prefix ContactList with **your own namespace** you created in module 2.
+
+
+1. Click **File** > **Save** to save the file
 
 1. Click **Preview** or **Update Preview**
 
@@ -114,9 +137,9 @@ title: Module 5&#58; Creating the ContactList Component
     ![](images/app-v2.png)
 
 
-## Step 5: Add Style
+## Step 5: Style the Component
 
-Notice that there is probably too much space above and below the phone number in the above screenshot. In this step, you'll add a style to the component to remove that extra space.
+There is probably too much space above and below the phone number. In this step, you'll add a style to the component to remove the extra space.
 
 
 1. Click **STYLE**

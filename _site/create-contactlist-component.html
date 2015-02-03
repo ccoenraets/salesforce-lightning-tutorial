@@ -69,15 +69,26 @@
     <div class="col-xs-12 col-sm-8">
         <h1>Module 5&#58; Creating the ContactList Component</h1>
         <!--<hr/>-->
-        <h2>Step 1: Create the Component</h2>
+        <p>In this module, you create a Lightning Component responsible for displaying the list of contacts and you add that component to the QuickContacts application.</p>
+
+<h2>What you will learn</h2>
+
+<ul>
+<li>Create a Lightning Component in the Developer Console</li>
+<li>Use component attributes</li>
+<li>Use event handlers</li>
+<li>Use Lightning Components in a Lightning Application</li>
+</ul>
+
+<h2>Step 1: Create the Component</h2>
 
 <ol>
 <li><p>In the Developer Console, click <strong>File</strong> &gt; <strong>New</strong> &gt; <strong>Lightning Component</strong>. Specify <strong>ContactList</strong> as the bundle name and click <strong>Submit</strong></p></li>
 <li><p>Implement the component as follows:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;aura:component controller=&quot;cc01.ContactController&quot;&gt;
+<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;aura:component controller=&quot;yournamespace.ContactController&quot;&gt;
 
-    &lt;aura:handler name=&quot;init&quot; value=&quot;{!this}&quot; action=&quot;{!c.doInit}&quot; /&gt;
     &lt;aura:attribute name=&quot;contacts&quot; type=&quot;Contact[]&quot;/&gt;
+    &lt;aura:handler name=&quot;init&quot; value=&quot;{!this}&quot; action=&quot;{!c.doInit}&quot; /&gt;
 
     &lt;ul class=&quot;list-group&quot;&gt;
         &lt;aura:iteration items=&quot;{!v.contacts}&quot; var=&quot;contact&quot;&gt;
@@ -95,9 +106,15 @@
 <h3>Code Highlights:</h3>
 
 <ul>
-<li>The <strong>init</strong> handler is defined to execute some code when the component is initialized. That code (<strong>doInit</strong>) is defined in the component <strong>controller</strong>. (you&#39;ll implement the controller in the next step)</li>
-<li>The <strong>contacts</strong> attribute is defined to hold the list of Contact objects returned from the server</li>
-<li><code>&lt;aura:iteration&gt;</code> is used to iterate through the list of contacts and create an <code>&lt;li&gt;</code> tag for each contact</li>
+<li><p>The controller assigned to the component (first line of code) refers to the <strong>server-side controller</strong> (ContactController) you created in module 3.</p>
+
+<blockquote>
+<p>Make sure you prefix the controller name with <strong>your own namespace</strong> you created in module 2.</p>
+</blockquote></li>
+<li><p>The <strong>contacts</strong> attribute is defined to hold the list of Contact objects returned from the server</p></li>
+<li><p>The <strong>init</strong> handler is defined to execute some code when the component is initialized. That code (<strong>doInit</strong>) is defined in the component
+<strong>client-side controller</strong>. (you&#39;ll implement the controller in the next step)</p></li>
+<li><p><code>&lt;aura:iteration&gt;</code> is used to iterate through the list of contacts and create an <code>&lt;li&gt;</code> for each contact</p></li>
 </ul></li>
 <li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</p></li>
 </ol>
@@ -119,8 +136,9 @@
 
 <ul>
 <li>The controller has a single function called <strong>doInit</strong>. This is the function the component calls when it is initialized.</li>
-<li>The doInit() function invokes the component helper <strong>getContacts()</strong> function to retrieve the list of contacts.</li>
+<li>The doInit() function invokes the component helper&#39;s <strong>getContacts()</strong> function to retrieve the list of contacts.</li>
 </ul></li>
+<li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</p></li>
 </ol>
 
 <h2>Step 3: Implement the Helper</h2>
@@ -143,13 +161,14 @@
 <h3>Code Highlights:</h3>
 
 <ul>
-<li>You first get a reference to the findAll method in the component&#39;s server-side controller (ContactController) and store it in the <strong>action</strong> variable.</li>
-<li>Since the call to the server findAll method is asynchronous, you register a callback function that is executed when the call returns: you simply assign the list of contacts returned by the server to the component&#39;s <strong>contacts</strong>.</li>
-<li>$A.enqueueAction(action) actually sends the request to execute the findAll() method to the server. More precisely, it adds the call to the queue of asynchronous server calls. That queue is an optimization feature of Lightning.</li>
+<li>You first get a reference to the <strong>findAll()</strong> method in the component&#39;s server-side controller (ContactController), and store it in the <strong>action</strong> variable.</li>
+<li>Since the call to the server findAll() method is asynchronous, you register a callback function that is executed when the call returns. In the callback function, you simply assign the list of contacts returned by the server to the component&#39;s <strong>contacts</strong> attribute.</li>
+<li>$A.enqueueAction(action) sends the request the server. More precisely, it adds the call to the queue of asynchronous server calls. That queue is an optimization feature of Lightning.</li>
 </ul></li>
+<li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</p></li>
 </ol>
 
-<h2>Step 4: Add Contact List to the Application</h2>
+<h2>Step 4: Add ContactList to the Application UI</h2>
 
 <ol>
 <li><p>In the developer console, go back to the <strong>QuickContacts</strong> application.</p>
@@ -161,11 +180,15 @@
 <div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;div class=&quot;container&quot;&gt;
     &lt;div class=&quot;row&quot;&gt;
         &lt;div class=&quot;col-sm-12&quot;&gt;
-            &lt;cc01:ContactList/&gt;
+            &lt;yournamespace:ContactList/&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-</code></pre></div></li>
+</code></pre></div>
+<blockquote>
+<p>Make sure you prefix ContactList with <strong>your own namespace</strong> you created in module 2.</p>
+</blockquote></li>
+<li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</p></li>
 <li><p>Click <strong>Preview</strong> or <strong>Update Preview</strong></p>
 
 <p><img src="images/application-update-preview.jpg" alt=""></p></li>
@@ -174,9 +197,9 @@
 <p><img src="images/app-v2.png" alt=""></p></li>
 </ol>
 
-<h2>Step 5: Add Style</h2>
+<h2>Step 5: Style the Component</h2>
 
-<p>Notice that there is probably too much space above and below the phone number in the above screenshot. In this step, you&#39;ll add a style to the component to remove that extra space.</p>
+<p>There is probably too much space above and below the phone number. In this step, you&#39;ll add a style to the component to remove the extra space.</p>
 
 <ol>
 <li><p>Click <strong>STYLE</strong></p>

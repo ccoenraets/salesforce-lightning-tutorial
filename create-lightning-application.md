@@ -7,8 +7,8 @@ In this module, you create the QuickContacts Lightning Application and you use B
 
 ## What you will learn
 - Create a Lightning application in the Developer Console
-- Use Static Resources in a Lightning application
-- Preview your Lightning application in the browser
+- Use Static Resources in a Lightning Application
+- Preview your Lightning Application in the browser
 
 
 ## Steps
@@ -48,15 +48,13 @@ In this module, you create the QuickContacts Lightning Application and you use B
 
 1. Click **File** > **Save** to save the file
 
-1. Click **Preview** (upper right corner) to preview the application in the browser
+1. Click **Preview** (upper right corner)
 
     ![](images/app-preview.jpg)
 
-1. Examine the application in the browser
+1.  Preview the application in the browser
 
     ![](images/app-layout.png)
-
-    In the next module, you implement the Contact List component and add it to the left column of the application.
 
 
 <div class="row" style="margin-top:40px;">
