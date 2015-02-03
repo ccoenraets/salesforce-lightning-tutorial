@@ -4,7 +4,7 @@ title: Module 1&#58; Creating a Developer Edition Account
 ---
 In this module, you create a Developer Edition Account that provides you with a full-featured but isolated Salesforce environment to perform the exercises in this workshop.
 
-> If you already signed up for a Developer Edition account, you can skip the instructions below and go directly to [Module 2](Creating-the-Data-Model.html).
+> Even if you already signed up for a Developer Edition account, it is **strongly recommended** that you sign up for a new Developer Edition account for this tutorial. Some of the steps in this tutorial may break some of the work you already did with your existing account.
 
 
 ## Steps
