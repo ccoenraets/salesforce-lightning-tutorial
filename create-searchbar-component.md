@@ -12,7 +12,7 @@ In this module, you create a SearchBar component that allows the user to search 
 
 ## Step 1: Create the SearchKeyChange Event:
 
-Now that we decided to build the SearchBar and the ContactList as two separate components, we need a way for ContactList to know when the search key changes so that it can retrieve and display the matching contacts. Events enable that kind of communication between components. In this step, you create an Lightning Event used by the SearchBar component to notify other components when the search key changes.
+Now that we decided to build SearchBar and ContactList as two separate components, we need a way for ContactList to know when the search key changes so that it can retrieve and display the matching contacts. Lightning Events enable that kind of communication between components. In this step, you create a Lightning Event used by the SearchBar component to notify other components when the search key changes.
 
 1. In the Developer Console, click **File** > **New** > **Lightning Event**. Specify **SearchKeyChange** as the bundle name and click **Submit**
 

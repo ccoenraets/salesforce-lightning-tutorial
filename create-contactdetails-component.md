@@ -1,6 +1,6 @@
 ---
 layout: module
-title: Module 7&#58; Creating the Contact Details Component
+title: Module 7&#58; Creating the ContactDetails Component
 ---
 
 In this module, you create the ContactDetails component. When the user selects a contact in ContactList, ContactDetails automatically displays the details for the selected contact.
