@@ -2,61 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24e0e096-c0e0-4282-8eb6-a3b0cddf2249" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font/SourceCodePro-Black.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font/SourceCodePro-Bold.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font/SourceCodePro-ExtraLight.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font/SourceCodePro-Light.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font/SourceCodePro-Regular.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font/SourceCodePro-Semibold.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font/SourceSansPro-Black.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font/SourceSansPro-BlackIt.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font/SourceSansPro-Bold.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font/SourceSansPro-BoldIt.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font/SourceSansPro-ExtraLight.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font/SourceSansPro-ExtraLightIt.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font/SourceSansPro-It.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font/SourceSansPro-Light.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font/SourceSansPro-LightIt.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font/SourceSansPro-Regular.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font/SourceSansPro-Semibold.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font/SourceSansPro-SemiboldIt.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/app-map.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/lightning.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font/LICENSE.txt" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Accessing-Data-using-SOQL-and-DML.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Batch-and-Schedule.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Creating-Triggers.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Creating-a-Controller-Extension.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Creating-a-Visualforce-Page.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Creating-the-Application.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Creating-the-Data-Model.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Using-JavaScript-in-Visualforce-Pages.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Using-the-Salesforce1-Platform-APIs-Heroku.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Using-the-Salesforce1-Platform-APIs.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/Accessing-Data-using-SOQL-and-DML.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/Batch-and-Schedule.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/Creating-Triggers.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/Creating-a-Controller-Extension.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/Creating-a-Visualforce-Page.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/Creating-the-Application.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/Creating-the-Data-Model.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/Testing.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/Using-JavaScript-in-Visualforce-Pages.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/Using-the-Salesforce1-Platform-APIs-Heroku.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/Using-the-Salesforce1-Platform-APIs.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/create-apex-controller.html" afterPath="$PROJECT_DIR$/_site/create-apex-controller.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/create-apex-controller.md" afterPath="$PROJECT_DIR$/create-apex-controller.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/create-contactdetails-component.html" afterPath="$PROJECT_DIR$/_site/create-contactdetails-component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/create-contactdetails-component.md" afterPath="$PROJECT_DIR$/create-contactdetails-component.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/create-searchbar-component.html" afterPath="$PROJECT_DIR$/_site/create-searchbar-component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/create-searchbar-component.md" afterPath="$PROJECT_DIR$/create-searchbar-component.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/home.html" afterPath="$PROJECT_DIR$/_layouts/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.md" afterPath="$PROJECT_DIR$/index.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/next.md" afterPath="$PROJECT_DIR$/next.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/css/styles.css" afterPath="$PROJECT_DIR$/_site/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_config.yml" afterPath="$PROJECT_DIR$/_config.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="salesforce-lightning-tutorial.iws" />
@@ -86,19 +32,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-35.533333" vertical-offset="929" max-vertical-offset="2175">
               <caret line="133" column="40" selection-start-line="133" selection-start-column="9" selection-end-line="133" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="setup-environment.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup-environment.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1035">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -146,16 +79,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="next.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="next.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/next.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3130016" vertical-offset="0" max-vertical-offset="1246">
-              <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+            <state vertical-scroll-proportion="-14.0" vertical-offset="0" max-vertical-offset="540">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
           <provider editor-type-id="MarkdownPreviewEditor">
             <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_config.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.023510972" vertical-offset="0" max-vertical-offset="1276">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -217,6 +160,7 @@
         <option value="$PROJECT_DIR$/create-searchbar-component.md" />
         <option value="$PROJECT_DIR$/create-contactdetails-component.md" />
         <option value="$PROJECT_DIR$/next.md" />
+        <option value="$PROJECT_DIR$/_config.yml" />
       </list>
     </option>
   </component>
@@ -224,9 +168,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2016" />
+    <option name="x" value="2565" />
     <option name="y" value="-377" />
-    <option name="width" value="2342" />
+    <option name="width" value="1793" />
     <option name="height" value="1373" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -346,7 +290,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2016" y="-377" width="2342" height="1373" extended-state="6" />
+    <frame x="2565" y="-377" width="1793" height="1373" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -354,7 +298,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16695133" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21807027" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -482,13 +426,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/next.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3130016" vertical-offset="0" max-vertical-offset="1246">
-          <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+        <state vertical-scroll-proportion="-14.0" vertical-offset="0" max-vertical-offset="540">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
         </state>
       </provider>
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.023510972" vertical-offset="0" max-vertical-offset="1276">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
