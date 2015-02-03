@@ -38,10 +38,10 @@ In this module, you create a Lightning Component responsible for displaying the 
     </aura:component>
     ```
 
+    > Make sure you prefix the controller name with **your own namespace** you created in module 2.
+
     ### Code Highlights:
     - The controller assigned to the component (first line of code) refers to the **server-side controller** (ContactController) you created in module 3.
-
-        > Make sure you prefix the controller name with **your own namespace** you created in module 2.
     - The **contacts** attribute is defined to hold the list of Contact objects returned from the server
     - The **init** handler is defined to execute some code when the component is initialized. That code (**doInit**) is defined in the component
 **client-side controller**. (you'll implement the controller in the next step)

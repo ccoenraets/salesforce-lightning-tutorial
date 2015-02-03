@@ -69,37 +69,45 @@
     <div class="col-xs-12 col-sm-8">
         <h1>Module 7&#58; Creating the Contact Details Component</h1>
         <!--<hr/>-->
-        <h2>Step 1: Create the ContactDetails Component</h2>
+        <p>In this module, you create the ContactDetails component. When the user selects a contact in ContactList, ContactDetails automatically displays the details for the selected contact.</p>
+
+<h2>What you will learn</h2>
+
+<ul>
+<li>Use Lightning&#39;s locationChange event as an application routing mechanism</li>
+<li>Track the state of an application using the URL&#39;s hashtag</li>
+</ul>
+
+<h2>Step 1: Create the ContactDetails Component</h2>
 
 <ol>
 <li><p>In the Developer Console, click <strong>File</strong> &gt; <strong>New</strong> &gt; <strong>Lightning Component</strong>. Specify <strong>ContactDetails</strong> as the bundle name and click <strong>Submit</strong></p></li>
 <li><p>Implement the component as follows:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;aura:component controller=&quot;cc01.ContactController&quot;&gt;
+<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;aura:component controller=&quot;yournamespace.ContactController&quot;&gt;
 
-&lt;aura:handler event=&quot;aura:locationChange&quot; action=&quot;{!c.locationChange}&quot;/&gt;
-&lt;aura:attribute name=&quot;contact&quot; type=&quot;Contact&quot; default=&quot;{&#39;sobjectType&#39;: &#39;Contact&#39;}&quot;/&gt;
+    &lt;aura:handler event=&quot;aura:locationChange&quot; action=&quot;{!c.locationChange}&quot;/&gt;
+    &lt;aura:attribute name=&quot;contact&quot; type=&quot;Contact&quot; default=&quot;{&#39;sobjectType&#39;: &#39;Contact&#39;}&quot;/&gt;
 
-&lt;div class=&quot;details&quot;&gt;
-    &lt;h1&gt;{! v.contact.Name }&lt;/h1&gt;
-    &lt;h3&gt;{! v.contact.Account.Name }&lt;/h3&gt;
-    &lt;h3&gt;{! v.contact.Title }&lt;/h3&gt;
-    &lt;p&gt;{! v.contact.Phone }&lt;/p&gt;
-    {! v.contact.MobilePhone }
-&lt;/div&gt;
-</code></pre></div></li>
-</ol>
+    &lt;div class=&quot;details&quot;&gt;
+        &lt;h1&gt;{! v.contact.Name }&lt;/h1&gt;
+        &lt;h3&gt;{! v.contact.Account.Name }&lt;/h3&gt;
+        &lt;h3&gt;{! v.contact.Title }&lt;/h3&gt;
+        &lt;p&gt;{! v.contact.Phone }&lt;/p&gt;
+        {! v.contact.MobilePhone }
+    &lt;/div&gt;
 
-<p><a href="/aura:component">/aura:component</a>
-    ```</p>
-
-<ol>
-<li>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</li>
+&lt;/aura:component&gt;
+</code></pre></div>
+<blockquote>
+<p>Make sure you prefix the controller name with <strong>your own namespace</strong> you created in module 2.</p>
+</blockquote></li>
+<li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</p></li>
 </ol>
 
 <h2>Step 2: Implement the Controller</h2>
 
 <ol>
-<li><p>Click <strong>CONTROLLER</strong></p></li>
+<li><p>Click <strong>CONTROLLER</strong> (upper right corner in the code editor)</p></li>
 <li><p>Implement the Controller as follows:</p>
 <div class="highlight"><pre><code class="text language-text" data-lang="text">({
     locationChange : function(component, event, helper) {
@@ -111,12 +119,13 @@
     }
 })
 </code></pre></div></li>
+<li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</p></li>
 </ol>
 
 <h2>Step 3: Implement the Helper</h2>
 
 <ol>
-<li><p>Click <strong>HELPER</strong></p></li>
+<li><p>Click <strong>HELPER</strong> (upper right corner in the code editor)</p></li>
 <li><p>Implement the helper as follows:</p>
 <div class="highlight"><pre><code class="text language-text" data-lang="text">({
     findById : function(component, contactId) {
@@ -131,12 +140,13 @@
     }
 })
 </code></pre></div></li>
+<li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</p></li>
 </ol>
 
-<h2>Step 4: Add Styles</h2>
+<h2>Step 4: Style the Application</h2>
 
 <ol>
-<li><p>Click <strong>STYLE</strong></p></li>
+<li><p>Click <strong>STYLE</strong> (upper right corner in the code editor)</p></li>
 <li><p>Add the following styles</p>
 <div class="highlight"><pre><code class="text language-text" data-lang="text">.THIS p {
     margin: 20px 0 2px 0;
@@ -150,24 +160,29 @@
     margin: 4px 0;
 }
 </code></pre></div></li>
+<li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</p></li>
 </ol>
 
-<h2>Step 5: Add the ContactDetails Component to the Application</h2>
+<h2>Step 5: Add ContactDetails to the Application</h2>
 
 <ol>
-<li><p>In the Developer Console, go back to the quickContacts application and add the contactDetails component:</p>
+<li><p>In the Developer Console, go back to the <strong>QuickContacts</strong> application and modify the container layout as follows to add the ContactDetails component to the right of the list:</p>
 <div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;div class=&quot;container&quot;&gt;
     &lt;div class=&quot;row&quot;&gt;
         &lt;div class=&quot;col-sm-4&quot;&gt;
-            &lt;cc01:SearchBar/&gt;
-            &lt;cc01:ContactList/&gt;
+            &lt;yournamespace:SearchBar/&gt;
+            &lt;yournamespace:ContactList/&gt;
         &lt;/div&gt;
         &lt;div class=&quot;col-sm-8&quot;&gt;
-            &lt;cc01:ContactDetails/&gt;
+            &lt;yournamespace:ContactDetails/&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-</code></pre></div></li>
+</code></pre></div>
+<blockquote>
+<p>Make sure you prefix SearchBar, ContactList, and ContactDetails with <strong>your own namespace</strong> you created in module 2.</p>
+</blockquote></li>
+<li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</p></li>
 <li><p>Click <strong>Update Preview</strong> to run the application in the browser</p>
 
 <p><img src="images/app-v5.png" alt=""></p></li>
@@ -213,7 +228,7 @@
             <ol class="list-group">
                 <li><a href="create-developer-edition.html">Creating a Developer Edition Account</a></li>
                 <li><a href="setup-environment.html">Setting Up Your Environment</a></li>
-                <li><a href="create-apex-controller.html">Creating an Apex Controller</a></li>
+                <li><a href="create-apex-controller.html">Creating a Lightning-Enabled Apex Controller</a></li>
                 <li><a href="create-lightning-application.html">Creating the Application</a></li>
                 <li><a href="create-contactlist-component.html">Creating the ContactList Component</a></li>
                 <li><a href="create-searchbar-component.html">Creating the SearchBar Component</a></li>

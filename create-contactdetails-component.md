@@ -3,6 +3,14 @@ layout: module
 title: Module 7&#58; Creating the Contact Details Component
 ---
 
+In this module, you create the ContactDetails component. When the user selects a contact in ContactList, ContactDetails automatically displays the details for the selected contact.
+
+## What you will learn
+
+- Use Lightning's locationChange event as an application routing mechanism
+- Track the state of an application using the URL's hashtag
+
+
 ## Step 1: Create the ContactDetails Component
 
 1. In the Developer Console, click **File** > **New** > **Lightning Component**. Specify **ContactDetails** as the bundle name and click **Submit**
@@ -10,29 +18,30 @@ title: Module 7&#58; Creating the Contact Details Component
 1. Implement the component as follows:
 
     ```
-<aura:component controller="cc01.ContactController">
+    <aura:component controller="yournamespace.ContactController">
 
-    <aura:handler event="aura:locationChange" action="{!c.locationChange}"/>
-    <aura:attribute name="contact" type="Contact" default="{'sobjectType': 'Contact'}"/>
+        <aura:handler event="aura:locationChange" action="{!c.locationChange}"/>
+        <aura:attribute name="contact" type="Contact" default="{'sobjectType': 'Contact'}"/>
 
-    <div class="details">
-        <h1>{! v.contact.Name }</h1>
-        <h3>{! v.contact.Account.Name }</h3>
-        <h3>{! v.contact.Title }</h3>
-        <p>{! v.contact.Phone }</p>
-        {! v.contact.MobilePhone }
-    </div>
+        <div class="details">
+            <h1>{! v.contact.Name }</h1>
+            <h3>{! v.contact.Account.Name }</h3>
+            <h3>{! v.contact.Title }</h3>
+            <p>{! v.contact.Phone }</p>
+            {! v.contact.MobilePhone }
+        </div>
 
-</aura:component>
+    </aura:component>
     ```
+    > Make sure you prefix the controller name with **your own namespace** you created in module 2.
+
 
 1. Click **File** > **Save** to save the file
 
 
 ## Step 2: Implement the Controller
 
-1. Click **CONTROLLER**
-
+1. Click **CONTROLLER** (upper right corner in the code editor)
 
 1. Implement the Controller as follows:
 
@@ -48,9 +57,11 @@ title: Module 7&#58; Creating the Contact Details Component
     })
     ```
 
+1. Click **File** > **Save** to save the file
+
 ## Step 3: Implement the Helper
 
-1. Click **HELPER**
+1. Click **HELPER** (upper right corner in the code editor)
 
 1. Implement the helper as follows:
 
@@ -69,9 +80,11 @@ title: Module 7&#58; Creating the Contact Details Component
     })
     ```
 
-## Step 4: Add Styles
+1. Click **File** > **Save** to save the file
 
-1. Click **STYLE**
+## Step 4: Style the Application
+
+1. Click **STYLE** (upper right corner in the code editor)
 
 1. Add the following styles
 
@@ -89,28 +102,33 @@ title: Module 7&#58; Creating the Contact Details Component
     }
     ```
 
-## Step 5: Add the ContactDetails Component to the Application
+1. Click **File** > **Save** to save the file
 
-1. In the Developer Console, go back to the quickContacts application and add the contactDetails component:
+## Step 5: Add ContactDetails to the Application
+
+1. In the Developer Console, go back to the **QuickContacts** application and modify the container layout as follows to add the ContactDetails component to the right of the list:
 
     ```
     <div class="container">
         <div class="row">
             <div class="col-sm-4">
-                <cc01:SearchBar/>
-                <cc01:ContactList/>
+                <yournamespace:SearchBar/>
+                <yournamespace:ContactList/>
             </div>
             <div class="col-sm-8">
-                <cc01:ContactDetails/>
+                <yournamespace:ContactDetails/>
             </div>
         </div>
     </div>
     ```
 
+    > Make sure you prefix SearchBar, ContactList, and ContactDetails with **your own namespace** you created in module 2.
+
+1. Click **File** > **Save** to save the file
+
 1. Click **Update Preview** to run the application in the browser
 
     ![](images/app-v5.png)
-
 
 
 

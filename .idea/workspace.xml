@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24e0e096-c0e0-4282-8eb6-a3b0cddf2249" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/create-apex-controller.html" afterPath="$PROJECT_DIR$/_site/create-apex-controller.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/create-contactdetails-component.html" afterPath="$PROJECT_DIR$/_site/create-contactdetails-component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/create-contactdetails-component.md" afterPath="$PROJECT_DIR$/create-contactdetails-component.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/create-contactlist-component.html" afterPath="$PROJECT_DIR$/_site/create-contactlist-component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/create-contactlist-component.md" afterPath="$PROJECT_DIR$/create-contactlist-component.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/create-developer-edition.html" afterPath="$PROJECT_DIR$/_site/create-developer-edition.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/create-lightning-application.html" afterPath="$PROJECT_DIR$/_site/create-lightning-application.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/create-searchbar-component.html" afterPath="$PROJECT_DIR$/_site/create-searchbar-component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/create-searchbar-component.md" afterPath="$PROJECT_DIR$/create-searchbar-component.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/module.html" afterPath="$PROJECT_DIR$/_layouts/module.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/next.html" afterPath="$PROJECT_DIR$/_site/next.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/setup-environment.html" afterPath="$PROJECT_DIR$/_site/setup-environment.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="salesforce-lightning-tutorial.iws" />
@@ -57,8 +67,8 @@
       <file leaf-file-name="create-contactlist-component.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/create-contactlist-component.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.533333" vertical-offset="1394" max-vertical-offset="2640">
-              <caret line="126" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+            <state vertical-scroll-proportion="-20.5" vertical-offset="0" max-vertical-offset="2805">
+              <caret line="41" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -67,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create-searchbar-component.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="create-searchbar-component.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/create-searchbar-component.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7953451" vertical-offset="1274" max-vertical-offset="2520">
-              <caret line="141" column="38" selection-start-line="141" selection-start-column="38" selection-end-line="141" selection-end-column="38" />
+            <state vertical-scroll-proportion="-32.033333" vertical-offset="1109" max-vertical-offset="2355">
+              <caret line="138" column="0" selection-start-line="137" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -80,11 +90,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="syntax.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/syntax.css">
+      <file leaf-file-name="create-contactdetails-component.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/create-contactdetails-component.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.55457467" vertical-offset="974" max-vertical-offset="2235">
+              <caret line="108" column="177" selection-start-line="108" selection-start-column="177" selection-end-line="108" selection-end-column="177" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="module.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_layouts/module.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-26.25" vertical-offset="0" max-vertical-offset="1095">
+              <caret line="42" column="86" selection-start-line="42" selection-start-column="86" selection-end-line="42" selection-end-column="86" />
               <folding />
             </state>
           </provider>
@@ -95,16 +118,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="1020">
               <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_config.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -159,7 +172,6 @@
       <list>
         <option value="$PROJECT_DIR$/css/styles.css" />
         <option value="$PROJECT_DIR$/_layouts/home.html" />
-        <option value="$PROJECT_DIR$/create-contactdetails-component.md" />
         <option value="$PROJECT_DIR$/next.md" />
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_includes/bootstrap-header.html" />
@@ -168,8 +180,10 @@
         <option value="$PROJECT_DIR$/setup-environment.md" />
         <option value="$PROJECT_DIR$/create-apex-controller.md" />
         <option value="$PROJECT_DIR$/create-lightning-application.md" />
-        <option value="$PROJECT_DIR$/create-contactlist-component.md" />
         <option value="$PROJECT_DIR$/create-searchbar-component.md" />
+        <option value="$PROJECT_DIR$/_layouts/module.html" />
+        <option value="$PROJECT_DIR$/create-contactlist-component.md" />
+        <option value="$PROJECT_DIR$/create-contactdetails-component.md" />
       </list>
     </option>
   </component>
@@ -395,17 +409,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/create-contactdetails-component.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-37.033333" vertical-offset="659" max-vertical-offset="1920">
-          <caret line="118" column="35" selection-start-line="118" selection-start-column="35" selection-end-line="118" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/next.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.0" vertical-offset="0" max-vertical-offset="540">
@@ -496,10 +499,18 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_layouts/module.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-26.25" vertical-offset="0" max-vertical-offset="1095">
+          <caret line="42" column="86" selection-start-line="42" selection-start-column="86" selection-end-line="42" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/create-contactlist-component.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.533333" vertical-offset="1394" max-vertical-offset="2640">
-          <caret line="126" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+        <state vertical-scroll-proportion="-20.5" vertical-offset="0" max-vertical-offset="2805">
+          <caret line="41" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -509,8 +520,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/create-searchbar-component.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7953451" vertical-offset="1274" max-vertical-offset="2520">
-          <caret line="141" column="38" selection-start-line="141" selection-start-column="38" selection-end-line="141" selection-end-column="38" />
+        <state vertical-scroll-proportion="-32.033333" vertical-offset="1109" max-vertical-offset="2355">
+          <caret line="138" column="0" selection-start-line="137" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/create-contactdetails-component.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55457467" vertical-offset="974" max-vertical-offset="2235">
+          <caret line="108" column="177" selection-start-line="108" selection-start-column="177" selection-end-line="108" selection-end-column="177" />
           <folding />
         </state>
       </provider>
