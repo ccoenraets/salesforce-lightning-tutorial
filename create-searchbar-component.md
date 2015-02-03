@@ -113,6 +113,11 @@ Now that we decided to build SearchBar and ContactList as two separate component
 
     > Make sure you separate the doInit() and the searchKeyChange() functions with a comma
 
+    ### Code Highlights:
+    - The function first gets the value of the new searchKey available in the event object.
+    - It then invokes the **findByName()** method in the Apex controller you created in module 3.
+    - When the asynchronous call returns, it assigns the list of contacts returned by findByName() to the component's **contacts** attribute.
+
 
 1. Click **File** > **Save** to save the file
 

@@ -177,7 +177,15 @@
 </code></pre></div>
 <blockquote>
 <p>Make sure you separate the doInit() and the searchKeyChange() functions with a comma</p>
-</blockquote></li>
+</blockquote>
+
+<h3>Code Highlights:</h3>
+
+<ul>
+<li>The function first gets the value of the new searchKey available in the event object.</li>
+<li>It then invokes the <strong>findByName()</strong> method in the Apex controller you created in module 3.</li>
+<li>When the asynchronous call returns, it assigns the list of contacts returned by findByName() to the component&#39;s <strong>contacts</strong> attribute.</li>
+</ul></li>
 <li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</p></li>
 </ol>
 
