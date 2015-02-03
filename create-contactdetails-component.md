@@ -69,6 +69,11 @@ In this module, you create the ContactDetails component. When the user selects a
     })
     ```
 
+    ### Code Highlights:
+    - The function first gets the new value of the hashtag available in the event object.
+    - It then parses the hashtag to extract the contact id and invokes the **findById()** method in the Apex controller you created in module 3.
+    - When the asynchronous call returns, it assigns the contact returned by findById() to the component's **contact** attribute.
+
 1. Click **File** > **Save** to save the file
 
 ## Step 3: Style the Application
