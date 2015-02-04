@@ -85,7 +85,7 @@
 <p><img src="images/devconsole.jpg" alt=""></p></li>
 <li><p>In the Developer Console, click <strong>File</strong> &gt; <strong>New</strong> &gt; <strong>Apex Class</strong>. Specify <strong>ContactController</strong> as the class name and click <strong>OK</strong>.</p></li>
 <li><p>Implement the class as follows:</p>
-<div class="highlight"><pre><code class="java language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ContactController</span> <span class="o">{</span>
+<div class="highlight"><pre><code class="java language-java" data-lang="java"><span class="kd">public</span> <span class="n">with</span> <span class="n">sharing</span> <span class="kd">class</span> <span class="nc">ContactController</span> <span class="o">{</span>
 
     <span class="nd">@AuraEnabled</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Contact</span><span class="o">&gt;</span> <span class="nf">findAll</span><span class="o">()</span> <span class="o">{</span>
