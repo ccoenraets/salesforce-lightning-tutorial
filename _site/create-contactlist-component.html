@@ -111,13 +111,13 @@
 
 <ul>
 <li>The controller assigned to the component (first line of code) refers to the <strong>server-side controller</strong> (ContactController) you created in module 3.</li>
-<li>The <strong>contacts</strong> attribute is defined to hold the list of Contact objects returned from the server</li>
-<li>The <strong>init</strong> handler is defined to execute some code when the component is initialized. That code (<strong>doInit</strong>) is defined in the component
-<strong>client-side controller</strong>. (you&#39;ll implement the controller in the next step)</li>
+<li>The <strong>contacts</strong> attribute is defined to hold the list of Contact objects returned from the server.</li>
+<li>The <strong>init</strong> handler is defined to execute some code when the component is initialized. That code (<strong>doInit</strong>) is defined in the component&#39;s
+<strong>client-side controller</strong> (you&#39;ll implement the controller in the next step).</li>
 <li><code>&lt;aura:iteration&gt;</code> is used to iterate through the list of contacts and create an <code>&lt;li&gt;</code> for each contact</li>
 <li>The <code>&lt;a href=&quot;{! &#39;#contact/&#39; + contact.Id }&quot;&gt;</code> anchor tag around the contact data is defined to set the page hashtag to <strong>#contact/</strong> followed by the contact id. In module 7, the ContactDetails component will use that hashtag to display details information every time the user clicks a new contact.</li>
 </ul></li>
-<li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</p></li>
+<li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file.</p></li>
 </ol>
 
 <h2>Step 2: Implement the Controller</h2>
@@ -141,8 +141,8 @@
 
 <ul>
 <li>The controller has a single function called <strong>doInit</strong>. This is the function the component calls when it is initialized.</li>
-<li>The function first gets a reference to the <strong>findAll()</strong> method in the component&#39;s server-side controller (ContactController), and store it in the <strong>action</strong> variable.</li>
-<li>Since the call to the server findAll() method is asynchronous, it then registers a callback function that is executed when the call returns. In the callback function, it simply assigns the returned list of contacts to the component&#39;s <strong>contacts</strong> attribute.</li>
+<li>You first get a reference to the <strong>findAll()</strong> method in the component&#39;s server-side controller (ContactController), and store it in the <strong>action</strong> variable.</li>
+<li>Since the call to the server&#39;s findAll() method is asynchronous, you then register a callback function that is executed when the call returns. In the callback function, you simply assign the list of contacts to the component&#39;s <strong>contacts</strong> attribute.</li>
 <li>$A.enqueueAction(action) sends the request the server. More precisely, it adds the call to the queue of asynchronous server calls. That queue is an optimization feature of Lightning.</li>
 </ul></li>
 <li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</p></li>
@@ -153,10 +153,10 @@
 <ol>
 <li><p>In the developer console, go back to the <strong>QuickContacts</strong> application.</p>
 
-<p>If you don&#39;t see the tab in the developer console, Select File &gt; Open Lightning Resources in the Developer Console menu, select QuickContacts in the dialog, and click the <strong>Open Selected</strong> button.</p>
+<p>If you don&#39;t see the tab in the developer console, select <strong>File</strong> &gt; <strong>Open Lightning Resources</strong> in the Developer Console menu, select <strong>QuickContacts</strong> &gt; <strong>APPLICATION</strong> in the dialog, and click the <strong>Open Selected</strong> button.</p>
 
 <p><img src="images/lightning-resources.jpg" alt=""></p></li>
-<li><p>Add the ContactList component in the first column of the application layout.</p>
+<li><p>Modify the <strong>container</strong> div as follows to add the ContactList component to the application layout.</p>
 <div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;div class=&quot;container&quot;&gt;
     &lt;div class=&quot;row&quot;&gt;
         &lt;div class=&quot;col-sm-12&quot;&gt;

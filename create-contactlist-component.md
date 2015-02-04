@@ -42,14 +42,14 @@ In this module, you create a Lightning Component responsible for displaying the 
 
     ### Code Highlights:
     - The controller assigned to the component (first line of code) refers to the **server-side controller** (ContactController) you created in module 3.
-    - The **contacts** attribute is defined to hold the list of Contact objects returned from the server
-    - The **init** handler is defined to execute some code when the component is initialized. That code (**doInit**) is defined in the component
-**client-side controller**. (you'll implement the controller in the next step)
+    - The **contacts** attribute is defined to hold the list of Contact objects returned from the server.
+    - The **init** handler is defined to execute some code when the component is initialized. That code (**doInit**) is defined in the component's
+**client-side controller** (you'll implement the controller in the next step).
     - ```<aura:iteration>``` is used to iterate through the list of contacts and create an ```<li>``` for each contact
     - The ```<a href="{! '#contact/' + contact.Id }">``` anchor tag around the contact data is defined to set the page hashtag to **#contact/** followed by the contact id. In module 7, the ContactDetails component will use that hashtag to display details information every time the user clicks a new contact.
 
 
-1. Click **File** > **Save** to save the file
+1. Click **File** > **Save** to save the file.
 
 
 ## Step 2: Implement the Controller
@@ -74,8 +74,8 @@ In this module, you create a Lightning Component responsible for displaying the 
 
     ### Code Highlights:
     - The controller has a single function called **doInit**. This is the function the component calls when it is initialized.
-    - The function first gets a reference to the **findAll()** method in the component's server-side controller (ContactController), and store it in the **action** variable.
-    - Since the call to the server findAll() method is asynchronous, it then registers a callback function that is executed when the call returns. In the callback function, it simply assigns the returned list of contacts to the component's **contacts** attribute.
+    - You first get a reference to the **findAll()** method in the component's server-side controller (ContactController), and store it in the **action** variable.
+    - Since the call to the server's findAll() method is asynchronous, you then register a callback function that is executed when the call returns. In the callback function, you simply assign the list of contacts to the component's **contacts** attribute.
     - $A.enqueueAction(action) sends the request the server. More precisely, it adds the call to the queue of asynchronous server calls. That queue is an optimization feature of Lightning.
 
 1. Click **File** > **Save** to save the file
@@ -85,12 +85,12 @@ In this module, you create a Lightning Component responsible for displaying the 
 
 1. In the developer console, go back to the **QuickContacts** application.
 
-    If you don't see the tab in the developer console, Select File > Open Lightning Resources in the Developer Console menu, select QuickContacts in the dialog, and click the **Open Selected** button.
+    If you don't see the tab in the developer console, select **File** > **Open Lightning Resources** in the Developer Console menu, select **QuickContacts** > **APPLICATION** in the dialog, and click the **Open Selected** button.
 
     ![](images/lightning-resources.jpg)
 
 
-1. Add the ContactList component in the first column of the application layout.
+1. Modify the **container** div as follows to add the ContactList component to the application layout.
 
     ```
     <div class="container">
