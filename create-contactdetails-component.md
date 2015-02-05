@@ -100,7 +100,7 @@ In this module, you create the ContactDetails component. When the user selects a
 
 ## Step 4: Add ContactDetails to the Application
 
-1. In the Developer Console, go back to the **QuickContacts** application and modify the container layout as follows to add the ContactDetails component to the right of the list:
+1. In the Developer Console, go back to the **QuickContacts** application and modify the container layout as follows to add the ContactDetails component to the right of the list (change the **class** of the first column to **col-sm-4** instead of col-sm-12, and add a second column to display ContactDetails):
 
     ```
     <div class="container">
